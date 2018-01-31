@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Rejestracja {% endblock %}
+
+{% block container %}
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="text-center">Rejestracja</h3>
+        </div>
+        <div class="panel-body">
+            {{ form(form) }}
+
+            <div class="rejestracja">
+                <div class="rejestracja_informacja">*Login musi zawierać od 6 do 20 znaków (bez polskich znaków).
+                </div>
+                <div class="rejestracja_informacja">*Hasło musi posiadać co najmniej 8 znaków. <a
+                            href="http://www.bezpiecznypc.pl/zasady-tworzenia-hasel.php" target="_blank">Dowiedz się
+                        jak stworzyć silne hasło.</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

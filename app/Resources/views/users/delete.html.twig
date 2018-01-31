@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+    {% include 'template/flashMessages.html.twig' %}
+    <a href="{{ path('users_all') }}" class="btn btn-success">Powrót</a>
+{% endblock %}

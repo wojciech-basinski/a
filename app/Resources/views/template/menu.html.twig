@@ -1,0 +1,16 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ url("homepage") }}">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        {% if app.user %}
+            <li><a href="{{ path('users_all') }}"><span class="glyphicon glyphicon-user"></span>{{ app.user.username }}</a></li>
+            <li><a href="{{ path("logout") }}">Logout</a></li>
+        {% else %}
+            <li><a href="{{ path("register") }}"><span class="glyphicon glyphicon-user"></span> Rejestracja</a></li>
+            <li><a href="{{ path("login") }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {% endif %}
+        </ul>
+    </div>
+</nav>
